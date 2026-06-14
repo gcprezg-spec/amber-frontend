@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import {
+  useState,
+  useEffect,
+} from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
 import { useParams } from 'react-router-dom';
 
-import { products } from '../data/products';
+import { getProduct } from '../services/productService';
 
 import { useCart } from '../components/CartContext';
 
@@ -26,10 +29,18 @@ export default function ProductPage() {
 
   const navigate = useNavigate();
 
-const product =
-  products.find(
-    (p) => p.id === Number(id)
-  );
+const [product, setProduct] =
+  useState<any>(null);
+
+useEffect(() => {
+
+  if (!id) return;
+
+  getProduct(Number(id))
+    .then(setProduct)
+    .catch(console.error);
+
+}, [id]);
 
   const { addToCart } = useCart();
 

@@ -12,7 +12,7 @@ import QuickAddModal from './QuickAddModal';
 
 import { Link } from 'react-router-dom';
 
-import { products } from '../data/products';
+import { getProducts } from '../services/productService';
 
 export default function BestSellers() {
 
@@ -54,9 +54,19 @@ const [selectedProduct, setSelectedProduct] =
 
   }, []);
 
-  const visibleProducts =
-    products.slice(startIndex, startIndex + 4);
+ const [products, setProducts] =
+  useState<any[]>([]);
 
+useEffect(() => {
+
+  getProducts()
+    .then(setProducts)
+    .catch(console.error);
+
+}, []);
+
+const visibleProducts =
+  products.slice(startIndex, startIndex + 4);
   return (
 
     <section className="bg-[#151515] py-32 overflow-hidden">

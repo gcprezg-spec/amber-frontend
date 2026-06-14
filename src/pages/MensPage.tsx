@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
 
 import QuickAddModal from '../components/QuickAddModal';
 
@@ -15,7 +16,18 @@ import Header from '../components/Header';
 
 import Footer from '../components/Footer';
 
-import { products } from '../data/products';
+import { getProducts } from '../services/productService';
+
+const [products, setProducts] =
+  useState<any[]>([]);
+
+useEffect(() => {
+
+  getProducts()
+    .then(setProducts)
+    .catch(console.error);
+
+}, []);
 
 export default function MensPage() {
 
