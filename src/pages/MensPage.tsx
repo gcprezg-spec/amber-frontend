@@ -18,7 +18,10 @@ import Footer from '../components/Footer';
 
 import { getProducts } from '../services/productService';
 
-const [products, setProducts] =
+
+export default function MensPage() {
+
+  const [products, setProducts] =
   useState<any[]>([]);
 
 useEffect(() => {
@@ -29,7 +32,6 @@ useEffect(() => {
 
 }, []);
 
-export default function MensPage() {
 
   const [quickOpen, setQuickOpen] =
   useState(false);
