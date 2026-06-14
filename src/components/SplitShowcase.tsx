@@ -78,7 +78,7 @@ export default function SplitShowcase() {
               />
             }
 
-            position={50}
+            
 
             style={{
               width: '100%',
