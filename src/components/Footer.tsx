@@ -1,121 +1,389 @@
+import { Link } from 'react-router-dom';
+
+import {
+  ArrowRight,
+} from 'lucide-react';
+
+import {
+  FaInstagram,
+  FaFacebookF,
+  FaWhatsapp,
+} from 'react-icons/fa';
+
+import logo from '../assets/footer-logo.png';
+
+
+
 export default function Footer() {
 
   return (
-    <footer className="bg-primary text-white pt-24 pb-12 px-6">
 
-      <div className="max-w-7xl mx-auto">
+<footer className="relative bg-primary text-white overflow-hidden">
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
+  {/* BACKGROUND AMBER TEXT */}
+  <div
+    className="
+      absolute inset-0
+      flex items-center justify-center
+      pointer-events-none
+      select-none
+    "
+  >
 
-          {/* LOGO */}
-          <div>
+    <h1
+      className="
+        text-[120px]
+        md:text-[220px]
+        lg:text-[320px]
+        font-black
+        text-white/[0.03]
+        tracking-wider
+      "
+    >
 
-            <h2 className="text-4xl font-black text-gold mb-6">
+      AMBER
 
-              AMBER
+    </h1>
 
-            </h2>
+  </div>
 
-            <p className="text-white/70 leading-relaxed">
+  <div className="relative max-w-7xl mx-auto px-6 py-24">
 
-              Crafted for confidence,
-              identity and timeless
-              luxury aesthetics.
+    {/* TOP BRAND SECTION */}
+    <div className="text-center">
 
-            </p>
+      <img
+        src={logo}
+        alt="Amber"
+        className="
+          h-28
+           md:h-36
+          w-auto
+          mx-auto
+          mb-6
+        "
+      />
 
-          </div>
+      <p
+        className="
+          text-gold
+          uppercase
+          tracking-[6px]
+          text-xs
+          mb-6
+        "
+      >
 
-          {/* MENU */}
-          <div>
 
-            <h3 className="uppercase tracking-[3px] text-sm mb-6 text-gold">
+      </p>
 
-              Menu
+      <p
+        className="
+          max-w-2xl
+          mx-auto
+          text-white/70
+          text-lg
+          leading-relaxed
+        "
+      >
 
-            </h3>
+        Crafted for confidence,
+        identity and timeless
+        luxury aesthetics.
 
-            <div className="flex flex-col gap-4 text-white/80">
+      </p>
 
-              <a href="/mens">Mens</a>
+      {/* SOCIALS */}
+      <div
+        className="
+          flex
+          justify-center
+          gap-6
+          mt-10
+        "
+      >
 
-              <a href="/womens">Womens</a>
+        <a
+          href="#"
+          className="
+            w-12 h-12
+            rounded-full
+            border border-white/10
+            flex items-center justify-center
+            hover:bg-gold
+            hover:text-black
+            hover:-translate-y-1
+            transition-all duration-300
+          "
+        >
 
-              <a href="/">Home</a>
+          <FaInstagram size={18} />
 
-            </div>
 
-          </div>
+        </a>
 
-          {/* CONTACT */}
-          <div>
+        <a
+          href="#"
+          className="
+            w-12 h-12
+            rounded-full
+            border border-white/10
+            flex items-center justify-center
+            hover:bg-gold
+            hover:text-black
+            hover:-translate-y-1
+            transition-all duration-300
+          "
+        >
 
-            <h3 className="uppercase tracking-[3px] text-sm mb-6 text-gold">
+          <FaFacebookF size={18} />
 
-              Contact
+        </a>
 
-            </h3>
+        <a
+          href="#"
+          className="
+            w-12 h-12
+            rounded-full
+            border border-white/10
+            flex items-center justify-center
+            hover:bg-gold
+            hover:text-black
+            hover:-translate-y-1
+            transition-all duration-300
+          "
+        >
 
-            <div className="flex flex-col gap-4 text-white/80">
+              <FaWhatsapp size={18} />
+        </a>
 
-              <p>amberluxury@gmail.com</p>
+      </div>
 
-              <p>+94 77 123 4567</p>
+    </div>
 
-              <p>Colombo, Sri Lanka</p>
+    {/* DIVIDER */}
+    <div className="my-20">
 
-            </div>
+      <div className="h-px bg-white/10" />
 
-          </div>
+    </div>
 
-          {/* NEWSLETTER */}
-          <div>
+    {/* MIDDLE SECTION */}
+    <div
+      className="
+        grid
+        md:grid-cols-3
+        gap-16
+      "
+    >
 
-            <h3 className="uppercase tracking-[3px] text-sm mb-6 text-gold">
+      {/* SHOP */}
+      <div>
 
-              Newsletter
+        <h3
+          className="
+            text-gold
+            uppercase
+            tracking-[4px]
+            text-sm
+            mb-8
+          "
+        >
 
-            </h3>
+          Shop
 
-            <div className="flex">
+        </h3>
 
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full bg-white/10 border border-white/10 px-5 py-4 outline-none"
-              />
+        <div className="flex flex-col gap-5">
 
-              <button className="bg-gold text-black px-6 font-bold">
+          <Link
+            to="/mens"
+            className="
+              group
+              flex items-center
+              justify-between
+              text-white/80
+              hover:text-gold
+              transition
+            "
+          >
 
-                →
+            Mens
 
-              </button>
+            <ArrowRight
+              size={16}
+              className="
+                opacity-0
+                group-hover:opacity-100
+                translate-x-[-10px]
+                group-hover:translate-x-0
+                transition-all
+              "
+            />
 
-            </div>
+          </Link>
 
-          </div>
+          <Link
+            to="/womens"
+            className="
+              group
+              flex items-center
+              justify-between
+              text-white/80
+              hover:text-gold
+              transition
+            "
+          >
 
-        </div>
+            Womens
 
-        {/* BOTTOM */}
-        <div className="border-t border-white/10 mt-20 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50">
+            <ArrowRight
+              size={16}
+              className="
+                opacity-0
+                group-hover:opacity-100
+                translate-x-[-10px]
+                group-hover:translate-x-0
+                transition-all
+              "
+            />
 
-          <p>
-
-            2026 Amber. All Rights Reserved.
-
-          </p>
-
-          <p>
-
-            Forge Your Aura
-
-          </p>
+          </Link>
 
         </div>
 
       </div>
 
-    </footer>
-  );
+      {/* CONTACT */}
+      <div>
+
+        <h3
+          className="
+            text-gold
+            uppercase
+            tracking-[4px]
+            text-sm
+            mb-8
+          "
+        >
+
+          Contact
+
+        </h3>
+
+        <div className="space-y-5 text-white/80">
+
+          <p>amberluxury@gmail.com</p>
+
+          <p>+94 77 123 4567</p>
+
+          <p>Colombo, Sri Lanka</p>
+
+        </div>
+
+      </div>
+
+      {/* NEWSLETTER */}
+      <div>
+
+        <h3
+          className="
+            text-gold
+            uppercase
+            tracking-[4px]
+            text-sm
+            mb-5
+          "
+        >
+
+          Join The Amber Circle
+
+        </h3>
+
+        <p
+          className="
+            text-white/60
+            mb-6
+            leading-relaxed
+          "
+        >
+
+          Get early access to
+          collections, exclusive
+          drops and future releases.
+
+        </p>
+
+        <div className="flex">
+
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="
+              flex-1
+              bg-white/5
+              border border-white/10
+              px-5 py-4
+              outline-none
+              focus:border-gold
+            "
+          />
+
+          <button
+            className="
+              bg-gold
+              text-black
+              px-6
+              hover:opacity-90
+              transition
+            "
+          >
+
+            <ArrowRight size={18} />
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {/* BOTTOM */}
+    <div
+      className="
+        border-t border-white/10
+        mt-20
+        pt-8
+        flex
+        flex-col
+        md:flex-row
+        items-center
+        justify-between
+        gap-4
+        text-white/40
+        text-sm
+      "
+    >
+
+      <p>
+
+        © 2026 Amber.
+        All Rights Reserved.
+
+      </p>
+
+      <p>
+
+        Forge Your Aura
+
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+);
 }
