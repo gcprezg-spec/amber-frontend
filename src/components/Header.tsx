@@ -96,7 +96,15 @@ export default function Header() {
                 <img
                   src={logo}
                   alt="Amber"
-                  className="h-10 md:h-12 w-auto"
+                  className="
+  h-7
+  sm:h-8
+  md:h-10
+  lg:h-12
+  w-auto
+  object-contain
+  flex-shrink-0
+"
                 />
 
               </Link>
@@ -166,18 +174,15 @@ export default function Header() {
                     setMenuOpen(true)
                   }
 
-                  className="
-                  flex items-center
-                  gap-3
-                  uppercase
-                  tracking-[4px]
-                  text-xs
-                  hover:text-gold
-                  transition duration-300
-                "
+                    className="
+                    flex items-center
+                    justify-center
+                    hover:text-gold
+                    transition duration-300
+                  "
                 >
 
-                  MENU
+                  
 
                   <Menu size={20} />
 
