@@ -59,7 +59,7 @@ export default function SplitShowcase() {
           viewport={{
             once: true,
           }}
-          className="relative overflow-hidden rounded-none"
+          className="relative overflow-hidden  rounded-[20px]"
         >
 
           <ReactCompareSlider

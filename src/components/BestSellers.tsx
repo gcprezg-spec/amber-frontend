@@ -72,7 +72,7 @@ const visibleProducts =
     <section className="bg-[#151515] py-32 overflow-hidden">
 
       {/* TOP */}
-      <div className="text-center mb-20 px-6">
+      <div className="text-center mb-10 px-6">
 
         <p className="uppercase tracking-[8px] text-gold text-sm mb-6">
 
@@ -83,7 +83,7 @@ const visibleProducts =
         <h1 className="text-white text-5xl md:text-7xl font-semibold leading-none">
 
           Explore Our Most
-          <br />
+          
           Trending Pieces
 
         </h1>

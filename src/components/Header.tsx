@@ -97,13 +97,11 @@ export default function Header() {
                   src={logo}
                   alt="Amber"
                   className="
-  h-7
-  sm:h-8
-  md:h-10
-  lg:h-12
-  w-auto
-  object-contain
-  flex-shrink-0
+    h-10
+    md:h-12
+    w-auto
+    object-contain
+    -translate-y-1
 "
                 />
 
